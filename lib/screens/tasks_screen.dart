@@ -12,7 +12,18 @@ class TasksScreen extends StatelessWidget {
             EdgeInsets.only(top: 60.0, left: 30.0, right: 30.0, bottom: 30.0),
         child: Column(
           children: [
-            Icon(Icons.list),
+            CircleAvatar(
+              child: Icon(
+                Icons.list,
+                size: 30.0,
+                color: Colors.lightBlueAccent,
+              ),
+              backgroundColor: Colors.white,
+              radius: 30.0,
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
             Text('Todoey'),
           ],
         ),
