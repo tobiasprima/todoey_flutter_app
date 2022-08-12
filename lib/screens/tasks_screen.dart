@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todoey_flutter/widgets/tasks_lists.dart';
 
 class TasksScreen extends StatelessWidget {
   const TasksScreen({Key? key}) : super(key: key);
@@ -64,32 +65,6 @@ class TasksScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class TasksList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        TasksTile(),
-        TasksTile(),
-        TasksTile(),
-      ],
-    );
-  }
-}
-
-class TasksTile extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: Text('this is a task'),
-      trailing: Checkbox(
-        value: false,
-        onChanged: (value) {},
       ),
     );
   }
