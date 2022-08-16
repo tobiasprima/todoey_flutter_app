@@ -5,12 +5,7 @@ import 'package:todoey_flutter/models/task.dart';
 import 'package:provider/provider.dart';
 import 'package:todoey_flutter/models/tasks_data.dart';
 
-class TasksScreen extends StatefulWidget {
-  @override
-  State<TasksScreen> createState() => _TasksScreenState();
-}
-
-class _TasksScreenState extends State<TasksScreen> {
+class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,13 +23,13 @@ class _TasksScreenState extends State<TasksScreen> {
                     bottom: MediaQuery.of(context).viewInsets.bottom),
                 child: AddTaskScreen(
                   (newTaskTitle) {
-                    setState(
-                      () {
-                        Provider.of<TaskData>(context).tasks.add(
-                              Task(name: newTaskTitle),
-                            );
-                      },
-                    );
+                    // setState(
+                    //   () {
+                    //     Provider.of<TaskData>(context).tasks.add(
+                    //           Task(name: newTaskTitle),
+                    //         );
+                    //   },
+                    // );
                     Navigator.pop(context);
                   },
                 ),
@@ -91,7 +86,7 @@ class _TasksScreenState extends State<TasksScreen> {
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              child: TasksList(Provider.of<TaskData>(context).tasks),
+              child: TasksList(),
             ),
           ),
         ],
